@@ -1,0 +1,21 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Maven
+backend/target/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# SQL Server database files
+*.mdf
+*.ldf
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log

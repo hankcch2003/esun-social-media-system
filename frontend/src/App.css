@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family:
+          Arial,
+          "Microsoft JhengHei",
+          sans-serif;
+  background: #f5f6f8;
+  color: #222;
+}
+
+
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  margin: 4px;
+  cursor: pointer;
+  background: #1976d2;
+  color: white;
+  font-size: 14px;
+}
+
+
+button:hover {
+  opacity: 0.85;
+}
+
+
+input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+
+h2 {
+  margin-bottom: 20px;
+}
+
+
+h3 {
+  margin-top: 0;
+}
+
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+
+.navbar {
+  background: #1976d2;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.navbar h2 {
+  margin: 0;
+}
+
+
+.post-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow:
+          0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.post-image {
+  margin: 10px 0;
+  color: #666;
+}
+
+
+.form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow:
+          0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.form-container button {
+  margin-top: 10px;
+}
+
+
+.comment {
+  background: #f5f5f5;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+}
+
+
+.danger-button {
+  background: #d32f2f;
+}
+
+
+.secondary-button {
+  background: #757575;
+}
+
+
+.success-button {
+  background: #388e3c;
+}
+
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+
+.page-header h2 {
+  margin-bottom: 5px;
+}
+
+
+.page-subtitle {
+  margin: 0;
+  color: #777;
+}
+
+
+.post-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}

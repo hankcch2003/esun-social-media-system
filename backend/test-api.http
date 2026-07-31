@@ -1,0 +1,81 @@
+### Register Test
+
+POST http://localhost:8080/users/register
+Content-Type: application/json
+
+{
+  "userName": "Hank Test",
+  "phone": "0911111111",
+  "email": "hank@test.com",
+  "password": "123456"
+}
+
+### Login Test
+
+POST http://localhost:8080/users/login
+Content-Type: application/json
+
+{
+  "phone": "0911111111",
+  "password": "123456"
+}
+
+> {%
+    client.global.set(
+        "token",
+        response.body.data.token
+    );
+%}
+
+### Create Post Test (JWT)
+
+POST http://localhost:8080/posts
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "content": "JWT Post Test",
+  "image": "jwt.jpg"
+}
+
+### Get All Posts Test (JWT)
+
+GET http://localhost:8080/posts
+Authorization: Bearer {{token}}
+
+### Get Post By Id Test (JWT)
+
+GET http://localhost:8080/posts/3
+Authorization: Bearer {{token}}
+
+### Update Post Test (JWT)
+
+PUT http://localhost:8080/posts/3
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "content": "Update Hello Social Media",
+  "image": "update.jpg"
+}
+
+### Create Comment Test (JWT)
+
+POST http://localhost:8080/comments
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "postId": 3,
+  "content": "JWT Comment Test"
+}
+
+### Get Comments By Post Test (JWT)
+
+GET http://localhost:8080/comments/post/3
+Authorization: Bearer {{token}}
+
+### Delete Post Test (JWT)
+
+DELETE http://localhost:8080/posts/4
+Authorization: Bearer {{token}}
